@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Model Canvas</title>
+    <title>Contractor Business Model</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -19,6 +18,12 @@
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(2, minmax(200px, auto)) minmax(150px, auto);
         gap: 12px;
+      }
+      @media (min-width: 1024px) {
+        .lg\:row-span-2 { grid-row: span 2 / span 2; }
+        .lg\:col-span-2 { grid-column: span 2 / span 2; }
+        .lg\:col-span-3 { grid-column: span 3 / span 3; }
+        .lg\:row-start-3 { grid-row-start: 3; }
       }
       @media (max-width: 1024px) {
         .bmc-grid {
@@ -32,12 +37,14 @@
   "imports": {
     "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
